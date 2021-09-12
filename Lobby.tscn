@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Lobby.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ButtonSingle" type="Button" parent="."]
+margin_left = 393.733
+margin_top = 173.001
+margin_right = 667.733
+margin_bottom = 225.001
+text = "Single player"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonHost" type="Button" parent="."]
+margin_left = 393.733
+margin_top = 255.057
+margin_right = 667.733
+margin_bottom = 307.057
+text = "Host"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonJoin" type="Button" parent="."]
+margin_left = 391.354
+margin_top = 338.301
+margin_right = 665.354
+margin_bottom = 390.301
+text = "Join"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ipDisplay" type="Label" parent="."]
+margin_left = 677.0
+margin_top = 26.0
+margin_right = 809.0
+margin_bottom = 212.0
+rect_scale = Vector2( 2.5, 3 )
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ipInput" type="TextEdit" parent="."]
+margin_left = 39.5307
+margin_top = 330.811
+margin_right = 174.531
+margin_bottom = 352.811
+rect_scale = Vector2( 2.5, 3 )
+text = "127.0.0.1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ButtonSingle" to="." method="_on_ButtonSingle_pressed"]
+[connection signal="pressed" from="ButtonHost" to="." method="_on_ButtonHost_pressed"]
+[connection signal="pressed" from="ButtonJoin" to="." method="_on_ButtonJoin_pressed"]
